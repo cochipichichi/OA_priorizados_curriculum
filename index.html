@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Currículum & OA Priorizados – Neotech Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#050816" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="theme-dark">
+  <header class="main-header">
+    <div class="header-left">
+      <div class="logo-circle">CN</div>
+      <div>
+        <h1>Currículum & OA Priorizados – Neotech</h1>
+        <p class="subtitle">
+          Dashboard de OA por asignatura, con vistas para estudiantes y docentes
+        </p>
+      </div>
+    </div>
+
+    <div class="header-right controls-toolbar">
+      <button class="ctrl-btn" data-action="home" title="Inicio 🏠">🏠</button>
+      <button class="ctrl-btn" data-action="narrator" title="Narrador 🗣️">🗣️</button>
+      <button class="ctrl-btn" data-action="theme" title="Tema claro/oscuro 🌓">🌓</button>
+      <button class="ctrl-btn" data-action="font-inc" title="Aumentar texto A+">A+</button>
+      <button class="ctrl-btn" data-action="font-dec" title="Disminuir texto A−">A−</button>
+      <button class="ctrl-btn" data-action="lang" title="Cambiar idioma 🌐">🌐</button>
+      <button class="ctrl-btn" data-action="focus" title="Modo foco / alto contraste 🧠">🧠</button>
+      <button class="ctrl-btn" data-action="search" title="Buscar OA 🔍">🔍</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <!-- Izquierda: filtros y KPIs -->
+    <section class="panel panel-left">
+      <h2 data-i18n="filtros-oa">Filtros & resumen</h2>
+
+      <div class="filters">
+        <label>
+          Asignatura
+          <select id="filter-asignatura">
+            <option value="">Todas</option>
+          </select>
+        </label>
+        <label>
+          Nivel
+          <select id="filter-nivel">
+            <option value="">Todos</option>
+          </select>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="filter-prioritario" />
+          Solo OA priorizados
+        </label>
+      </div>
+
+      <div class="kpi-card kpi-primary">
+        <span class="kpi-label">OA cargados</span>
+        <span class="kpi-value" id="kpi-oa">0</span>
+        <span class="kpi-desc">por asignaturas priorizadas</span>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-label">Asignaturas</span>
+        <span class="kpi-value" id="kpi-asignaturas">0</span>
+        <span class="kpi-desc">Biología, CN, Tecnología, etc.</span>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-label">Vistas completas</span>
+        <span class="kpi-value">Estudiante / Docente</span>
+        <span class="kpi-desc">KPSI, rúbricas, quizzes y tickets</span>
+      </div>
+
+      <div class="mini-chart-card">
+        <h3>OA por tipo de recurso</h3>
+        <canvas id="oaTipoChart" aria-label="OA por tipo de recurso" role="img"></canvas>
+      </div>
+    </section>
+
+    <!-- Centro: tarjetas de OA -->
+    <section class="panel panel-center">
+      <h2 data-i18n="lista-oa">OA priorizados por asignatura</h2>
+      <p class="hint-text" id="narrator-text">
+        Explora los Objetivos de Aprendizaje priorizados, filtra por asignatura y nivel,
+        y abre la vista de estudiante o docente para ver las secuencias de clases,
+        recursos XR (3D, AR, VR), rúbricas, evaluaciones, KPSI, quiz y ticket de salida.
+      </p>
+
+      <div class="oa-cards-container" id="oa-cards-container">
+        <!-- Tarjetas generadas por JavaScript -->
+      </div>
+    </section>
+
+    <!-- Derecha: detalle rápido / selección actual -->
+    <section class="panel panel-right">
+      <h2 data-i18n="detalle-rapido">Detalle rápido del OA</h2>
+      <div id="oa-detail-quick" class="oa-detail-quick empty">
+        <p>Selecciona una tarjeta para ver un resumen del OA aquí.</p>
+      </div>
+
+      <div class="bottom-chart-card">
+        <h3>OA con XR / IoT / PEVE</h3>
+        <canvas id="oaXRChart" aria-label="OA con XR / IoT / PEVE" role="img"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- Overlay de búsqueda global -->
+  <div id="search-overlay" class="search-overlay" aria-hidden="true">
+    <div class="search-box">
+      <input type="search" id="search-input"
+             placeholder="Buscar por OA, asignatura, nivel o palabra clave..." />
+      <button id="search-close">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Modal detalle OA con pestañas Estudiante / Docente -->
+  <div id="oa-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <header class="modal-header">
+        <div>
+          <h2 id="modal-oa-titulo"></h2>
+          <p id="modal-oa-meta" class="modal-meta"></p>
+        </div>
+        <button id="modal-close" class="modal-close" aria-label="Cerrar">✕</button>
+      </header>
+
+      <div class="modal-tabs">
+        <button class="modal-tab active" data-tab="estudiante">👩‍🎓 Vista estudiante</button>
+        <button class="modal-tab" data-tab="docente">👨‍🏫 Vista docente</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Estudiante -->
+        <section id="tab-estudiante" class="tab-panel active">
+          <div id="modal-oa-resumen-est"></div>
+
+          <div class="chips-row" id="modal-oa-chips"></div>
+
+          <div class="section-card">
+            <h3>🧠 KPSI – ¿Qué sé sobre este tema?</h3>
+            <ul id="modal-kpsi-list"></ul>
+          </div>
+
+          <div class="section-card">
+            <h3>🧪 Quiz de práctica</h3>
+            <ul id="modal-quiz-list"></ul>
+          </div>
+
+          <div class="section-card">
+            <h3>🎟️ Ticket de salida</h3>
+            <ul id="modal-ticket-list"></ul>
+          </div>
+
+          <div class="section-card">
+            <h3>✨ Experiencias XR (3D / AR / VR)</h3>
+            <div class="xr-buttons" id="modal-xr-buttons">
+              <!-- Botones generados dinámicamente -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Docente -->
+        <section id="tab-docente" class="tab-panel">
+          <div id="modal-oa-resumen-doc"></div>
+
+          <div class="section-card">
+            <h3>📅 Secuencia de sesiones</h3>
+            <ol id="modal-sesiones-list"></ol>
+          </div>
+
+          <div class="section-card">
+            <h3>📊 Rúbrica de evaluación</h3>
+            <div class="rubrica-wrapper" id="modal-rubrica-wrapper"></div>
+          </div>
+
+          <div class="section-card">
+            <h3>📨 Evaluación & PEVE</h3>
+            <div id="modal-evaluacion-doc"></div>
+          </div>
+
+          <div class="section-card">
+            <h3>🔗 Enlace a Mineduc / Currículum</h3>
+            <p id="modal-mineduc-link"></p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <p>
+      Hecho con 💜 por Pancho & Belén – Neotech EduLab ·
+      <span id="footer-year"></span>
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

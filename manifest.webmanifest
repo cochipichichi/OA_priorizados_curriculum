@@ -1,0 +1,9 @@
+{
+  "name": "Currículum & OA Priorizados – Neotech",
+  "short_name": "OA Neotech",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "icons": []
+}
