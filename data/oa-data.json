@@ -1,0 +1,335 @@
+[
+  {
+    "id": "CN1M_OA2_EVOLUCION",
+    "codigo": "CN1M OA2",
+    "asignatura": "Ciencias Naturales",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Analizar e interpretar evidencias de la evolución y la selección natural.",
+    "area": "Biología – Evolución",
+    "tags": [
+      "XR",
+      "PEVE",
+      "PAES",
+      "PIE"
+    ],
+    "xr": {
+      "viewer3d": "viewer3D/fotosintesis.html",
+      "ar": "viewerAR/fotosintesis.html",
+      "vr": "viewerVR/fotosintesis.html"
+    },
+    "kpsi": [
+      "Puedo dar al menos un ejemplo de evidencia de la evolución.",
+      "Puedo explicar con mis palabras qué es la selección natural.",
+      "Puedo identificar aportes de Darwin y Wallace a la teoría de la evolución."
+    ],
+    "quiz": [
+      {
+        "pregunta": "¿Cuál de las siguientes es una evidencia de la evolución?",
+        "alternativas": [
+          "Que todos los seres vivos son iguales.",
+          "El registro fósil que muestra cambios en las especies a lo largo del tiempo.",
+          "Que las especies nunca cambian.",
+          "Que todos los organismos viven en los mismos lugares."
+        ],
+        "correcta": 1
+      }
+    ],
+    "ticketSalida": [
+      "Escribe un ejemplo de evidencia de la evolución y explica qué nos muestra.",
+      "Relaciona selección natural, ambiente y variación con un ejemplo simple."
+    ],
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – Evidencias de la evolución",
+        "objetivo": "Reconocer distintos tipos de evidencias de la evolución usando ejemplos y modelos.",
+        "actividades": [
+          "Activación de saberes previos con KPSI.",
+          "Análisis guiado de imágenes de fósiles, embriones y estructuras homólogas.",
+          "Mini salida virtual (video o recurso web) para observar diversidad de especies."
+        ],
+        "evaluacion": "Lista de cotejo sobre identificación de evidencias y participación en la discusión."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Reconoce y explica evidencias de la evolución.",
+        "destacado": "Reconoce varios tipos de evidencias y las explica con vocabulario científico básico.",
+        "competente": "Reconoce al menos una evidencia y la explica de forma parcial.",
+        "inicial": "Menciona ejemplos sin relacionarlos claramente con la evolución."
+      }
+    ],
+    "evaluacionDocente": "Registra el desempeño en KPSI, análisis de evidencias y uso de datos en el template PEVE.",
+    "mineducUrl": "https://www.curriculumnacional.cl/recursos/ciencias-naturales-1-medio-unidad-1-oa2-actividad-3",
+    "contexto": {
+      "liceo": "Liceo Bicentenario de Excelencia Polivalente San Nicolás",
+      "sede": "San Nicolás",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio BIO",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+  },
+  {
+    "id": "BIO1M_OA5_FOTOSINTESIS",
+    "codigo": "BIO1M OA5",
+    "asignatura": "Biología",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Explicar el proceso de fotosíntesis y su importancia para los seres vivos.",
+    "area": "Ciencias Naturales",
+    "tags": [
+      "XR",
+      "PEVE",
+      "PIE"
+    ],
+    "xr": {
+      "viewer3d": "viewer3D/fotosintesis.html",
+      "ar": "viewerAR/fotosintesis.html",
+      "vr": "viewerVR/fotosintesis.html"
+    },
+    "kpsi": [
+      "Puedo explicar qué necesita una planta para hacer fotosíntesis.",
+      "Puedo dibujar un esquema simple de la fotosíntesis.",
+      "Puedo relacionar fotosíntesis con el oxígeno que respiramos."
+    ],
+    "quiz": [
+      {
+        "pregunta": "¿En qué parte de la célula vegetal ocurre principalmente la fotosíntesis?",
+        "alternativas": [
+          "En el núcleo",
+          "En los cloroplastos",
+          "En la mitocondria",
+          "En la membrana plasmática"
+        ],
+        "correcta": 1
+      }
+    ],
+    "ticketSalida": [
+      "Escribe con tus palabras por qué la fotosíntesis es importante para los animales (incluyendo a las personas).",
+      "Dibuja un esquema simple de la fotosíntesis y etiqueta al menos tres elementos."
+    ],
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – Animación y modelo 3D",
+        "objetivo": "Activar conocimientos previos y observar un modelo 3D de cloroplasto/planta.",
+        "actividades": [
+          "Aplicación de KPSI inicial en el repositorio.",
+          "Exploración guiada de modelo 3D/AR de la planta.",
+          "Construcción colectiva de un diagrama simple."
+        ],
+        "evaluacion": "Observación anecdótica + registro rápido de KPSI en el template PEVE."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Explica el proceso de fotosíntesis con vocabulario científico básico.",
+        "destacado": "Explica con claridad el proceso completo de fotosíntesis usando términos como cloroplasto, CO₂, glucosa y oxígeno.",
+        "competente": "Explica las ideas principales de la fotosíntesis, aunque omite algunos términos o pasos.",
+        "inicial": "Entrega una explicación parcial o confusa, con escasa referencia a conceptos clave."
+      }
+    ],
+    "evaluacionDocente": "Registra resultados del quiz y ticket de salida en el template PEVE.",
+    "mineducUrl": "https://www.curriculumnacional.cl/",
+    "contexto": {
+      "liceo": "Liceo Bicentenario de Excelencia Polivalente San Nicolás",
+      "sede": "San Nicolás",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio BIO",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+  },
+  {
+    "id": "BIO1M_OA6_RESPIRACION",
+    "codigo": "BIO1M OA6",
+    "asignatura": "Biología",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Explicar la respiración celular y relacionarla con el uso de energía en el organismo.",
+    "area": "Ciencias Naturales",
+    "tags": [
+      "XR",
+      "PEVE"
+    ],
+    "xr": {
+      "viewer3d": "viewer3D/mitocondria.html",
+      "ar": "viewerAR/mitocondria.html",
+      "vr": "viewerVR/mitocondria.html"
+    },
+    "kpsi": [
+      "Puedo decir por qué nuestro cuerpo necesita energía.",
+      "Puedo ubicar la mitocondria como parte de la célula.",
+      "Puedo comparar de forma simple fotosíntesis y respiración celular."
+    ],
+    "quiz": [
+      {
+        "pregunta": "¿Cuál es la función principal de la respiración celular?",
+        "alternativas": [
+          "Producir oxígeno para la célula.",
+          "Transformar la energía de los nutrientes en ATP.",
+          "Formar glucosa a partir de CO₂ y agua.",
+          "Almacenar información genética."
+        ],
+        "correcta": 1
+      }
+    ],
+    "ticketSalida": [
+      "Explica en una frase qué relación tienen la respiración celular y la actividad física."
+    ],
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – Animación de la mitocondria",
+        "objetivo": "Reconocer la mitocondria y el rol del ATP como energía para la célula.",
+        "actividades": [
+          "Visualización de una animación / modelo 3D de mitocondria.",
+          "Mapa conceptual guiado sobre nutrientes, oxígeno, ATP y desechos."
+        ],
+        "evaluacion": "Revisión del mapa conceptual y participación en la discusión."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Relaciona respiración celular con uso de energía en el organismo.",
+        "destacado": "Explica con claridad cómo la respiración celular permite obtener energía para distintas funciones del cuerpo.",
+        "competente": "Menciona la obtención de energía, pero con explicaciones parciales.",
+        "inicial": "Presenta dificultad para relacionar la respiración celular con la energía del organismo."
+      }
+    ],
+    "evaluacionDocente": "Articula este OA con actividades de Educación Física o del invernadero (sensores y consumo energético).",
+    "mineducUrl": "https://www.curriculumnacional.cl/",
+    "contexto": {
+      "liceo": "Liceo Bicentenario de Excelencia Polivalente San Nicolás",
+      "sede": "San Nicolás",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio BIO",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+  },
+  {
+    "id": "LE1M_OA1_LECTURA",
+    "codigo": "LE1M OA1",
+    "asignatura": "Lenguaje y Comunicación",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Leer y comprender textos para contextualizar y complementar las lecturas literarias.",
+    "area": "Lenguaje",
+    "tags": [
+      "Comprensión lectora",
+      "PEVE"
+    ],
+    "xr": {
+      "viewer3d": "",
+      "ar": "",
+      "vr": ""
+    },
+    "kpsi": [
+      "Puedo identificar la idea principal de un texto informativo.",
+      "Puedo localizar información explícita en un texto."
+    ],
+    "quiz": [],
+    "ticketSalida": [
+      "Escribe una frase que resuma el texto leído hoy."
+    ],
+    "sesiones": [],
+    "rubrica": [],
+    "evaluacionDocente": "Complementa este OA con rúbricas de comprensión lectora y registros PEVE.",
+    "mineducUrl": "https://www.curriculumnacional.cl/recursos/lenguaje-1-medio",
+    "contexto": {
+      "liceo": "Neotech EduLab SpA – Plataforma PEVE",
+      "sede": "Online",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio LENG",
+      "anio": 2025,
+      "jornada": "Vespertina"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+  },
+  {
+    "id": "MA1M_OA1_NUMEROS",
+    "codigo": "MA1M OA1",
+    "asignatura": "Matemática",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Resolver problemas que involucren operaciones con números racionales.",
+    "area": "Matemática",
+    "tags": [
+      "Problemas",
+      "PEVE"
+    ],
+    "xr": {
+      "viewer3d": "",
+      "ar": "",
+      "vr": ""
+    },
+    "kpsi": [
+      "Puedo ubicar fracciones en la recta numérica.",
+      "Puedo realizar sumas y restas con fracciones con igual denominador."
+    ],
+    "quiz": [],
+    "ticketSalida": [
+      "Escribe un problema de la vida cotidiana que se resuelva con fracciones."
+    ],
+    "sesiones": [],
+    "rubrica": [],
+    "evaluacionDocente": "Registra desempeño en resolución de problemas con números racionales.",
+    "mineducUrl": "https://www.curriculumnacional.cl/recursos/matematica-1-medio",
+    "contexto": {
+      "liceo": "Neotech EduLab SpA – Plataforma PEVE",
+      "sede": "Online",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio MAT",
+      "anio": 2025,
+      "jornada": "Vespertina"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+  },
+  {
+    "id": "HI1M_OA2_BURGUESIA",
+    "codigo": "HI1M OA2",
+    "asignatura": "Historia, Geografía y Ciencias Sociales",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Caracterizar la cultura burguesa, su ideal de vida y valores durante el siglo XIX.",
+    "area": "Historia",
+    "tags": [
+      "Historia",
+      "Priorización"
+    ],
+    "xr": {
+      "viewer3d": "",
+      "ar": "",
+      "vr": ""
+    },
+    "kpsi": [
+      "Puedo nombrar al menos dos características de la cultura burguesa del siglo XIX."
+    ],
+    "quiz": [],
+    "ticketSalida": [
+      "Explica una diferencia entre la vida burguesa y la de los sectores populares en el siglo XIX."
+    ],
+    "sesiones": [],
+    "rubrica": [],
+    "evaluacionDocente": "Puedes cruzar este OA con recursos digitales del Currículum Nacional y registrar evidencias en el template PEVE.",
+    "mineducUrl": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/historia-geografia-ciencias-sociales/1-medio/hi1m-oa-02",
+    "contexto": {
+      "liceo": "Neotech EduLab SpA – Plataforma PEVE",
+      "sede": "Online",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio HIST",
+      "anio": 2025,
+      "jornada": "Vespertina"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+  }
+]

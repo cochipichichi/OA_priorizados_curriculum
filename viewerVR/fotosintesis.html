@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Viewer VR – Fotosíntesis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="title-block">
+      <div class="title-chip">Viewer VR</div>
+      <div>
+        <h1 class="title">🥽 Exploración inmersiva – Fotosíntesis</h1>
+        <p class="subtitle">Puedes usar este visor en pantallas grandes o integrarlo luego con experiencias VR específicas.</p>
+      </div>
+    </div>
+    <div class="controls-toolbar">
+      <button class="ctrl-btn" data-action="home">🏠</button>
+      <button class="ctrl-btn" data-action="speak">🗣️</button>
+      <button class="ctrl-btn" data-action="theme">🌓</button>
+      <button class="ctrl-btn" data-action="font-plus">A+</button>
+      <button class="ctrl-btn" data-action="font-minus">A−</button>
+      <button class="ctrl-btn" data-action="lang">🌐</button>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <section class="dashboard-main">
+      <article class="card kpi-card" style="min-height:60vh;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;">
+        <model-viewer src="../assets/models/fotosintesis.glb"
+                      alt="Fotosíntesis"
+                      camera-controls
+                      auto-rotate
+                      shadow-intensity="1"
+                      style="width:100%;height:100%;min-height:320px;border-radius:18px;overflow:hidden;">
+        </model-viewer>
+        <p id="scene-description" style="margin-top:10px;font-size:0.9rem;">
+          Usa este visor como base. Más adelante puedes enlazarlo con escenas VR (por ejemplo, en Meta Quest) sobre Fotosíntesis.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    (function() {
+      const root = document.documentElement;
+      let currentLang = "es";
+
+      function setFont(delta) {
+        const style = getComputedStyle(root);
+        const base = parseFloat(style.getPropertyValue("--font-size-base")) || 16;
+        const next = Math.min(22, Math.max(12, base + delta));
+        root.style.setProperty("--font-size-base", next + "px");
+      }
+
+      function toggleTheme() {
+        const current = root.getAttribute("data-theme") || "dark";
+        root.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+      }
+
+      function narrate() {
+        const textEl = document.getElementById("scene-description");
+        if (!textEl || !("speechSynthesis" in window)) return;
+        const text = textEl.textContent;
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = currentLang === "es" ? "es-ES" : "en-US";
+        window.speechSynthesis.speak(utter);
+      }
+
+      function swapLanguage() {
+        currentLang = currentLang === "es" ? "en" : "es";
+      }
+
+      document.querySelectorAll(".ctrl-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const action = btn.dataset.action;
+          if (action === "home") {
+            window.location.href = "../index.html";
+          }
+          if (action === "speak") narrate();
+          if (action === "theme") toggleTheme();
+          if (action === "font-plus") setFont(1);
+          if (action === "font-minus") setFont(-1);
+          if (action === "lang") swapLanguage();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

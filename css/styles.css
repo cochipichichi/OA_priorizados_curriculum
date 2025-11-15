@@ -356,10 +356,19 @@ body.focus-mode {
   font-size: 0.9rem;
 }
 
+
 .oa-meta {
   font-size: 0.78rem;
   color: var(--text-muted);
 }
+
+.oa-contexto {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  opacity: 0.9;
+  margin: 2px 0 4px;
+}
+
 
 .oa-badges {
   display: flex;

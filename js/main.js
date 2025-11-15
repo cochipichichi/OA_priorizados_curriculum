@@ -1,238 +1,358 @@
 // Datos de ejemplo de OA priorizados y su estructura de recursos
-const oaData = [
+const oaDataFallback = [
   {
-    id: "BIO1M_OA5",
-    codigo: "OA5",
-    asignatura: "Biología",
-    nivel: "1° medio",
-    prioridad: "prioritario",
-    titulo: "Explicar el proceso de fotosíntesis y su importancia para los seres vivos.",
-    area: "Ciencias Naturales",
-    tags: ["XR", "PEVE", "PIE"],
-    xr: { viewer3d: "viewer3d_fotosintesis.html", ar: "viewerAR_fotosintesis.html", vr: "viewerVR_fotosintesis.html" },
-    kpsi: [
+    "id": "CN1M_OA2_EVOLUCION",
+    "codigo": "CN1M OA2",
+    "asignatura": "Ciencias Naturales",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Analizar e interpretar evidencias de la evolución y la selección natural.",
+    "area": "Biología – Evolución",
+    "tags": [
+      "XR",
+      "PEVE",
+      "PAES",
+      "PIE"
+    ],
+    "xr": {
+      "viewer3d": "viewer3D/fotosintesis.html",
+      "ar": "viewerAR/fotosintesis.html",
+      "vr": "viewerVR/fotosintesis.html"
+    },
+    "kpsi": [
+      "Puedo dar al menos un ejemplo de evidencia de la evolución.",
+      "Puedo explicar con mis palabras qué es la selección natural.",
+      "Puedo identificar aportes de Darwin y Wallace a la teoría de la evolución."
+    ],
+    "quiz": [
+      {
+        "pregunta": "¿Cuál de las siguientes es una evidencia de la evolución?",
+        "alternativas": [
+          "Que todos los seres vivos son iguales.",
+          "El registro fósil que muestra cambios en las especies a lo largo del tiempo.",
+          "Que las especies nunca cambian.",
+          "Que todos los organismos viven en los mismos lugares."
+        ],
+        "correcta": 1
+      }
+    ],
+    "ticketSalida": [
+      "Escribe un ejemplo de evidencia de la evolución y explica qué nos muestra.",
+      "Relaciona selección natural, ambiente y variación con un ejemplo simple."
+    ],
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – Evidencias de la evolución",
+        "objetivo": "Reconocer distintos tipos de evidencias de la evolución usando ejemplos y modelos.",
+        "actividades": [
+          "Activación de saberes previos con KPSI.",
+          "Análisis guiado de imágenes de fósiles, embriones y estructuras homólogas.",
+          "Mini salida virtual (video o recurso web) para observar diversidad de especies."
+        ],
+        "evaluacion": "Lista de cotejo sobre identificación de evidencias y participación en la discusión."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Reconoce y explica evidencias de la evolución.",
+        "destacado": "Reconoce varios tipos de evidencias y las explica con vocabulario científico básico.",
+        "competente": "Reconoce al menos una evidencia y la explica de forma parcial.",
+        "inicial": "Menciona ejemplos sin relacionarlos claramente con la evolución."
+      }
+    ],
+    "evaluacionDocente": "Registra el desempeño en KPSI, análisis de evidencias y uso de datos en el template PEVE.",
+    "mineducUrl": "https://www.curriculumnacional.cl/recursos/ciencias-naturales-1-medio-unidad-1-oa2-actividad-3",
+    "contexto": {
+      "liceo": "Liceo Bicentenario de Excelencia Polivalente San Nicolás",
+      "sede": "San Nicolás",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio BIO",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+  },
+  {
+    "id": "BIO1M_OA5_FOTOSINTESIS",
+    "codigo": "BIO1M OA5",
+    "asignatura": "Biología",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Explicar el proceso de fotosíntesis y su importancia para los seres vivos.",
+    "area": "Ciencias Naturales",
+    "tags": [
+      "XR",
+      "PEVE",
+      "PIE"
+    ],
+    "xr": {
+      "viewer3d": "viewer3D/fotosintesis.html",
+      "ar": "viewerAR/fotosintesis.html",
+      "vr": "viewerVR/fotosintesis.html"
+    },
+    "kpsi": [
       "Puedo explicar qué necesita una planta para hacer fotosíntesis.",
       "Puedo dibujar un esquema simple de la fotosíntesis.",
       "Puedo relacionar fotosíntesis con el oxígeno que respiramos."
     ],
-    quiz: [
+    "quiz": [
       {
-        pregunta: "¿En qué parte de la célula vegetal ocurre principalmente la fotosíntesis?",
-        alternativas: ["En el núcleo", "En los cloroplastos", "En la mitocondria", "En la membrana plasmática"],
-        correcta: 1
-      },
-      {
-        pregunta: "¿Cuál es el gas que la planta toma del aire para la fotosíntesis?",
-        alternativas: ["Oxígeno (O₂)", "Nitrógeno (N₂)", "Dióxido de carbono (CO₂)", "Hidrógeno (H₂)"],
-        correcta: 2
+        "pregunta": "¿En qué parte de la célula vegetal ocurre principalmente la fotosíntesis?",
+        "alternativas": [
+          "En el núcleo",
+          "En los cloroplastos",
+          "En la mitocondria",
+          "En la membrana plasmática"
+        ],
+        "correcta": 1
       }
     ],
-    ticketSalida: [
+    "ticketSalida": [
       "Escribe con tus palabras por qué la fotosíntesis es importante para los animales (incluyendo a las personas).",
       "Dibuja un esquema simple de la fotosíntesis y etiqueta al menos tres elementos."
     ],
-    sesiones: [
+    "sesiones": [
       {
-        titulo: "Sesión 1 – Activación & KPSI XR",
-        objetivo: "Activar conocimientos previos y explorar modelos 3D de cloroplasto y hoja.",
-        actividades: [
-          "Aplicar KPSI de entrada (3–4 ítems) en versión papel o formulario.",
-          "Explorar modelo 3D de una hoja y un cloroplasto en el visor 3D.",
-          "Lluvia de ideas: ¿qué creen que necesita una planta para vivir?"
+        "titulo": "Sesión 1 – Animación y modelo 3D",
+        "objetivo": "Activar conocimientos previos y observar un modelo 3D de cloroplasto/planta.",
+        "actividades": [
+          "Aplicación de KPSI inicial en el repositorio.",
+          "Exploración guiada de modelo 3D/AR de la planta.",
+          "Construcción colectiva de un diagrama simple."
         ],
-        evaluacion: "Observación de participación y registro rápido en lista de cotejo."
-      },
-      {
-        titulo: "Sesión 2 – Desarrollo guiado con XR",
-        objetivo: "Comprender el proceso de fotosíntesis usando apoyos visuales y XR.",
-        actividades: [
-          "Explicación guiada con apoyo de esquema en pizarra y modelo XR.",
-          "Trabajo en parejas con ficha accesible (alto contraste, pictogramas).",
-          "Comparar respiración celular y fotosíntesis a nivel muy general."
-        ],
-        evaluacion: "Preguntas orales focalizadas y revisión de ficha de trabajo."
-      },
-      {
-        titulo: "Sesión 3 – Consolidación & Ticket de salida",
-        objetivo: "Sintetizar el proceso de fotosíntesis y verificar comprensión.",
-        actividades: [
-          "Aplicar quiz breve (4–5 preguntas) en papel o digital.",
-          "Completar mapa conceptual o esquema en grupos.",
-          "Ticket de salida individual."
-        ],
-        evaluacion: "Corrección del quiz, revisión de ticket de salida, feedback breve."
+        "evaluacion": "Observación anecdótica + registro rápido de KPSI en el template PEVE."
       }
     ],
-    rubrica: [
+    "rubrica": [
       {
-        criterio: "Explica el proceso de fotosíntesis con vocabulario científico básico.",
-        destacado: "Explica con claridad el proceso completo de fotosíntesis usando términos como cloroplasto, CO₂, glucosa y oxígeno.",
-        competente: "Explica las ideas principales de la fotosíntesis, aunque omite algunos términos o pasos.",
-        inicial: "Entrega una explicación parcial o confusa, con escasa referencia a conceptos clave."
-      },
-      {
-        criterio: "Utiliza modelos XR/3D para apoyar su explicación.",
-        destacado: "Integra adecuadamente el modelo 3D/XR para señalar partes y procesos.",
-        competente: "Usa el modelo para identificar algunas partes, aunque con apoyo del docente.",
-        inicial: "Presenta dificultad para relacionar el modelo con la explicación."
+        "criterio": "Explica el proceso de fotosíntesis con vocabulario científico básico.",
+        "destacado": "Explica con claridad el proceso completo de fotosíntesis usando términos como cloroplasto, CO₂, glucosa y oxígeno.",
+        "competente": "Explica las ideas principales de la fotosíntesis, aunque omite algunos términos o pasos.",
+        "inicial": "Entrega una explicación parcial o confusa, con escasa referencia a conceptos clave."
       }
     ],
-    evaluacionDocente: "Puedes registrar resultados del quiz y ticket de salida en una hoja de cálculo o en un registro PEVE, marcando logro por ítem y observaciones cualitativas breves.",
-    mineducUrl: "https://www.curriculumnacional.cl/"
+    "evaluacionDocente": "Registra resultados del quiz y ticket de salida en el template PEVE.",
+    "mineducUrl": "https://www.curriculumnacional.cl/",
+    "contexto": {
+      "liceo": "Liceo Bicentenario de Excelencia Polivalente San Nicolás",
+      "sede": "San Nicolás",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio BIO",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
   },
   {
-    id: "BIO1M_OA6",
-    codigo: "OA6",
-    asignatura: "Biología",
-    nivel: "1° medio",
-    prioridad: "prioritario",
-    titulo: "Explicar la respiración celular y relacionarla con el uso de energía en el organismo.",
-    area: "Ciencias Naturales",
-    tags: ["XR", "PEVE"],
-    xr: { viewer3d: "viewer3d_mitocondria.html", ar: "viewerAR_mitocondria.html", vr: "viewerVR_mitocondria.html" },
-    kpsi: [
+    "id": "BIO1M_OA6_RESPIRACION",
+    "codigo": "BIO1M OA6",
+    "asignatura": "Biología",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Explicar la respiración celular y relacionarla con el uso de energía en el organismo.",
+    "area": "Ciencias Naturales",
+    "tags": [
+      "XR",
+      "PEVE"
+    ],
+    "xr": {
+      "viewer3d": "viewer3D/mitocondria.html",
+      "ar": "viewerAR/mitocondria.html",
+      "vr": "viewerVR/mitocondria.html"
+    },
+    "kpsi": [
       "Puedo decir por qué nuestro cuerpo necesita energía.",
       "Puedo ubicar la mitocondria como parte de la célula.",
       "Puedo comparar de forma simple fotosíntesis y respiración celular."
     ],
-    quiz: [
+    "quiz": [
       {
-        pregunta: "¿En qué orgánulo ocurre principalmente la respiración celular?",
-        alternativas: ["En el cloroplasto", "En la mitocondria", "En el aparato de Golgi", "En el núcleo"],
-        correcta: 1
-      }
-    ],
-    ticketSalida: [
-      "Completa la frase: La respiración celular permite que la célula obtenga ______ a partir de los nutrientes.",
-      "Menciona un ejemplo cotidiano donde uses energía en tu vida diaria."
-    ],
-    sesiones: [
-      {
-        titulo: "Sesión 1 – Activación y contraste con fotosíntesis",
-        objetivo: "Diferenciar fotosíntesis y respiración celular a nivel general.",
-        actividades: [
-          "KPSI de entrada y repaso rápido de fotosíntesis.",
-          "Análisis de imágenes o modelo XR de mitocondria.",
-          "Tabla comparativa guiada (similitudes y diferencias)."
+        "pregunta": "¿Cuál es la función principal de la respiración celular?",
+        "alternativas": [
+          "Producir oxígeno para la célula.",
+          "Transformar la energía de los nutrientes en ATP.",
+          "Formar glucosa a partir de CO₂ y agua.",
+          "Almacenar información genética."
         ],
-        evaluacion: "Revisión de tabla comparativa y participación oral."
+        "correcta": 1
       }
     ],
-    rubrica: [
+    "ticketSalida": [
+      "Explica en una frase qué relación tienen la respiración celular y la actividad física."
+    ],
+    "sesiones": [
       {
-        criterio: "Relaciona respiración celular con uso de energía en el organismo.",
-        destacado: "Da ejemplos claros y correctos de actividades cotidianas que requieren energía y las vincula con la respiración celular.",
-        competente: "Menciona algunos ejemplos, aunque con explicaciones parciales.",
-        inicial: "Entrega ejemplos confusos o sin relación clara con la respiración celular."
+        "titulo": "Sesión 1 – Animación de la mitocondria",
+        "objetivo": "Reconocer la mitocondria y el rol del ATP como energía para la célula.",
+        "actividades": [
+          "Visualización de una animación / modelo 3D de mitocondria.",
+          "Mapa conceptual guiado sobre nutrientes, oxígeno, ATP y desechos."
+        ],
+        "evaluacion": "Revisión del mapa conceptual y participación en la discusión."
       }
     ],
-    evaluacionDocente: "Revisa los productos de los estudiantes (tablas comparativas, respuestas de ticket de salida) y registra si logran diferenciar los procesos clave.",
-    mineducUrl: "https://www.curriculumnacional.cl/"
+    "rubrica": [
+      {
+        "criterio": "Relaciona respiración celular con uso de energía en el organismo.",
+        "destacado": "Explica con claridad cómo la respiración celular permite obtener energía para distintas funciones del cuerpo.",
+        "competente": "Menciona la obtención de energía, pero con explicaciones parciales.",
+        "inicial": "Presenta dificultad para relacionar la respiración celular con la energía del organismo."
+      }
+    ],
+    "evaluacionDocente": "Articula este OA con actividades de Educación Física o del invernadero (sensores y consumo energético).",
+    "mineducUrl": "https://www.curriculumnacional.cl/",
+    "contexto": {
+      "liceo": "Liceo Bicentenario de Excelencia Polivalente San Nicolás",
+      "sede": "San Nicolás",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio BIO",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
   },
   {
-    id: "CN08_OA2",
-    codigo: "OA2",
-    asignatura: "Ciencias Naturales",
-    nivel: "8° básico",
-    prioridad: "prioritario",
-    titulo: "Investigar y explicar interacciones en ecosistemas considerando flujo de materia y energía.",
-    area: "Ciencias Naturales",
-    tags: ["IoT", "Invernadero", "PEVE"],
-    xr: { viewer3d: "viewer3d_ecosistema.html", ar: "viewerAR_ecosistema.html", vr: "viewerVR_ecosistema.html" },
-    kpsi: [
-      "Puedo identificar productores, consumidores y descomponedores en un ecosistema.",
-      "Puedo leer un gráfico simple con datos de un invernadero o estanque.",
-      "Puedo explicar una cadena trófica básica."
+    "id": "LE1M_OA1_LECTURA",
+    "codigo": "LE1M OA1",
+    "asignatura": "Lenguaje y Comunicación",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Leer y comprender textos para contextualizar y complementar las lecturas literarias.",
+    "area": "Lenguaje",
+    "tags": [
+      "Comprensión lectora",
+      "PEVE"
     ],
-    quiz: [
-      {
-        pregunta: "En una cadena trófica, las plantas suelen ser:",
-        alternativas: ["Consumidores primarios", "Productores", "Descomponedores", "Consumidores secundarios"],
-        correcta: 1
-      }
+    "xr": {
+      "viewer3d": "",
+      "ar": "",
+      "vr": ""
+    },
+    "kpsi": [
+      "Puedo identificar la idea principal de un texto informativo.",
+      "Puedo localizar información explícita en un texto."
     ],
-    ticketSalida: [
-      "Dibuja una cadena trófica simple usando ejemplos del invernadero o estanque.",
-      "Escribe una acción concreta para cuidar el ecosistema del invernadero."
+    "quiz": [],
+    "ticketSalida": [
+      "Escribe una frase que resuma el texto leído hoy."
     ],
-    sesiones: [
-      {
-        titulo: "Sesión 1 – Lectura de datos del invernadero/estanque",
-        objetivo: "Interpretar datos simples (T°, HR, pH) para describir el estado de un sistema.",
-        actividades: [
-          "Revisión de tabla o dashboard con datos del invernadero o SIAMP.",
-          "Discusión guiada: ¿qué patrones observamos?",
-          "Relación con necesidades de los organismos del sistema."
-        ],
-        evaluacion: "Lista de cotejo sobre lectura e interpretación básica de datos."
-      }
-    ],
-    rubrica: [
-      {
-        criterio: "Interpreta datos simples para justificar afirmaciones sobre el ecosistema.",
-        destacado: "Usa datos de manera precisa para justificar explicaciones sobre el estado del ecosistema.",
-        competente: "Usa algunos datos, pero con explicaciones parciales.",
-        inicial: "Menciona datos sin conectarlos con explicaciones claras."
-      }
-    ],
-    evaluacionDocente: "Puedes vincular esta experiencia con PEVE mediante preguntas que integren interpretación de gráficos, tablas y explicaciones escritas.",
-    mineducUrl: "https://www.curriculumnacional.cl/"
+    "sesiones": [],
+    "rubrica": [],
+    "evaluacionDocente": "Complementa este OA con rúbricas de comprensión lectora y registros PEVE.",
+    "mineducUrl": "https://www.curriculumnacional.cl/recursos/lenguaje-1-medio",
+    "contexto": {
+      "liceo": "Neotech EduLab SpA – Plataforma PEVE",
+      "sede": "Online",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio LENG",
+      "anio": 2025,
+      "jornada": "Vespertina"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
   },
   {
-    id: "TEC2M_PROYECTO",
-    codigo: "Proyecto",
-    asignatura: "Tecnología",
-    nivel: "2° medio",
-    prioridad: "integrado",
-    titulo: "Diseñar y prototipar una solución tecnológica para el invernadero escolar.",
-    area: "Tecnología",
-    tags: ["IoT", "Diseño 3D", "Proyecto"],
-    xr: { viewer3d: "viewer3d_prototipo.html", ar: "viewerAR_prototipo.html", vr: "viewerVR_prototipo.html" },
-    kpsi: [
-      "Puedo describir un problema del invernadero que se pueda mejorar con tecnología.",
-      "Puedo diferenciar entre idea, boceto y prototipo.",
-      "Puedo trabajar en equipo respetando turnos y roles."
+    "id": "MA1M_OA1_NUMEROS",
+    "codigo": "MA1M OA1",
+    "asignatura": "Matemática",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Resolver problemas que involucren operaciones con números racionales.",
+    "area": "Matemática",
+    "tags": [
+      "Problemas",
+      "PEVE"
     ],
-    quiz: [
-      {
-        pregunta: "¿Qué es un prototipo?",
-        alternativas: [
-          "El producto final terminado",
-          "Un modelo inicial que permite probar y mejorar una solución",
-          "Un dibujo decorativo",
-          "Una lista de materiales"
-        ],
-        correcta: 1
-      }
+    "xr": {
+      "viewer3d": "",
+      "ar": "",
+      "vr": ""
+    },
+    "kpsi": [
+      "Puedo ubicar fracciones en la recta numérica.",
+      "Puedo realizar sumas y restas con fracciones con igual denominador."
     ],
-    ticketSalida: [
-      "Escribe en una frase clara el problema que tu grupo quiere resolver en el invernadero.",
-      "Dibuja un boceto rápido de tu idea de solución."
+    "quiz": [],
+    "ticketSalida": [
+      "Escribe un problema de la vida cotidiana que se resuelva con fracciones."
     ],
-    sesiones: [
-      {
-        titulo: "Sesión 1 – Problema y usuarios",
-        objetivo: "Identificar y definir un problema concreto del invernadero.",
-        actividades: [
-          "Recorrido guiado (presencial o virtual) por el invernadero.",
-          "Lluvia de ideas de problemas observados.",
-          "Priorización y redacción de problema elegido."
-        ],
-        evaluacion: "Revisión del enunciado de problema y participación en el grupo."
-      }
+    "sesiones": [],
+    "rubrica": [],
+    "evaluacionDocente": "Registra desempeño en resolución de problemas con números racionales.",
+    "mineducUrl": "https://www.curriculumnacional.cl/recursos/matematica-1-medio",
+    "contexto": {
+      "liceo": "Neotech EduLab SpA – Plataforma PEVE",
+      "sede": "Online",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio MAT",
+      "anio": 2025,
+      "jornada": "Vespertina"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+  },
+  {
+    "id": "HI1M_OA2_BURGUESIA",
+    "codigo": "HI1M OA2",
+    "asignatura": "Historia, Geografía y Ciencias Sociales",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Caracterizar la cultura burguesa, su ideal de vida y valores durante el siglo XIX.",
+    "area": "Historia",
+    "tags": [
+      "Historia",
+      "Priorización"
     ],
-    rubrica: [
-      {
-        criterio: "Define con claridad el problema tecnológico a resolver.",
-        destacado: "Formula un problema específico, realista y conectado con el contexto del invernadero.",
-        competente: "Formula un problema comprensible, aunque amplio o poco acotado.",
-        inicial: "Formula un problema confuso o muy general."
-      }
+    "xr": {
+      "viewer3d": "",
+      "ar": "",
+      "vr": ""
+    },
+    "kpsi": [
+      "Puedo nombrar al menos dos características de la cultura burguesa del siglo XIX."
     ],
-    evaluacionDocente: "Elabora una rúbrica simple para evaluar el enunciado de problema, el trabajo colaborativo y la calidad del prototipo.",
-    mineducUrl: "https://www.curriculumnacional.cl/"
+    "quiz": [],
+    "ticketSalida": [
+      "Explica una diferencia entre la vida burguesa y la de los sectores populares en el siglo XIX."
+    ],
+    "sesiones": [],
+    "rubrica": [],
+    "evaluacionDocente": "Puedes cruzar este OA con recursos digitales del Currículum Nacional y registrar evidencias en el template PEVE.",
+    "mineducUrl": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/historia-geografia-ciencias-sociales/1-medio/hi1m-oa-02",
+    "contexto": {
+      "liceo": "Neotech EduLab SpA – Plataforma PEVE",
+      "sede": "Online",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio HIST",
+      "anio": 2025,
+      "jornada": "Vespertina"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
   }
 ];
+
+
+let oaData = [];
+
+function loadOAData() {
+  return fetch("data/oa-data.json")
+    .then((res) => {
+      if (!res.ok) throw new Error("No se pudo cargar oa-data.json");
+      return res.json();
+    })
+    .then((data) => {
+      oaData = data;
+    })
+    .catch((err) => {
+      console.warn("Usando OA de respaldo:", err);
+      oaData = oaDataFallback;
+    });
+}
+
 
 // Estado global simple
 let currentLang = "es";
@@ -370,10 +490,20 @@ function renderOACards() {
       buttonsRow.appendChild(btn);
     });
 
-    card.appendChild(header);
-    card.appendChild(title);
-    card.appendChild(meta);
-    card.appendChild(badges);
+
+card.appendChild(header);
+card.appendChild(title);
+card.appendChild(meta);
+
+if (oa.contexto) {
+  const ctx = document.createElement("div");
+  ctx.className = "oa-contexto";
+  const { liceo, sede, curso, anio } = oa.contexto;
+  ctx.textContent = `📍 ${liceo || ""} · ${sede || ""} · ${curso || ""} (${anio || ""})`;
+  card.appendChild(ctx);
+}
+
+card.appendChild(badges);
     card.appendChild(buttonsRow);
 
     card.addEventListener("click", () => {
@@ -411,14 +541,17 @@ function handleOACardButton(action, oa) {
     return;
   }
   if (action === "csv") {
-    alert("Idea: abriría un template de registro CSV / Google Sheets para este OA.");
-    return;
+  const url = oa.csvTemplateUrl || "docs/plantilla_peve_kpsi_quiz_ticket.csv";
+  window.open(url, "_blank");
+  return;
+};
   }
   // Acciones lógicas que abren modal en secciones específicas
   openOAModal(oa, "estudiante");
 }
 
 // Detalle rápido panel derecho
+
 function renderQuickDetail(oa) {
   const container = document.getElementById("oa-detail-quick");
   if (!container) return;
@@ -433,6 +566,13 @@ function renderQuickDetail(oa) {
   const pMeta = document.createElement("p");
   pMeta.className = "oa-meta";
   pMeta.textContent = `${oa.nivel} · ${oa.area}`;
+
+  const pCtx = document.createElement("p");
+  pCtx.className = "oa-contexto";
+  if (oa.contexto) {
+    const { liceo, sede, curso, anio } = oa.contexto;
+    pCtx.textContent = `📍 ${liceo || ""} · ${sede || ""} · ${curso || ""} (${anio || ""})`;
+  }
 
   const chips = document.createElement("div");
   chips.className = "detail-chips";
@@ -458,9 +598,9 @@ function renderQuickDetail(oa) {
   container.appendChild(h3);
   container.appendChild(pTitulo);
   container.appendChild(pMeta);
+  if (oa.contexto) container.appendChild(pCtx);
   container.appendChild(chips);
 }
-
 // Modal OA
 function openOAModal(oa, initialView = "estudiante") {
   const modal = document.getElementById("oa-modal");
@@ -928,12 +1068,21 @@ function registerServiceWorker() {
   }
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  initFilters();
-  renderOACards();
-  initCharts();
-  setupControls();
-  setupModalEvents();
-  setFooterYear();
-  registerServiceWorker();
+  loadOAData()
+    .catch(() => {
+      // Si falla la carga del JSON, usamos los datos de respaldo
+      console.warn("Fallo al cargar oa-data.json, usando oaDataFallback");
+    })
+    .finally(() => {
+      initFilters();
+      renderOACards();
+      initCharts();
+      setupControls();
+      setupModalEvents();
+      setFooterYear();
+      registerServiceWorker();
+    });
 });
+
