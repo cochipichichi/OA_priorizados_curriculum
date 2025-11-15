@@ -360,12 +360,19 @@ let currentFontSize = 16;
 let currentSelectedOA = null;
 
 // Render de filtros base
+
 function initFilters() {
   const asignaturas = [...new Set(oaData.map((oa) => oa.asignatura))].sort();
   const niveles = [...new Set(oaData.map((oa) => oa.nivel))].sort();
+  const liceos = [...new Set(oaData.map((oa) => oa.contexto?.liceo).filter(Boolean))].sort();
+  const sedes = [...new Set(oaData.map((oa) => oa.contexto?.sede).filter(Boolean))].sort();
+  const anios = [...new Set(oaData.map((oa) => oa.contexto?.anio).filter(Boolean))].sort((a, b) => a - b);
 
   const selAsig = document.getElementById("filter-asignatura");
   const selNivel = document.getElementById("filter-nivel");
+  const selLiceo = document.getElementById("filter-liceo");
+  const selSede = document.getElementById("filter-sede");
+  const selAnio = document.getElementById("filter-anio");
 
   asignaturas.forEach((asig) => {
     const opt = document.createElement("option");
@@ -381,14 +388,42 @@ function initFilters() {
     selNivel.appendChild(opt);
   });
 
+  liceos.forEach((liceo) => {
+    if (!selLiceo) return;
+    const opt = document.createElement("option");
+    opt.value = liceo;
+    opt.textContent = liceo;
+    selLiceo.appendChild(opt);
+  });
+
+  sedes.forEach((sede) => {
+    if (!selSede) return;
+    const opt = document.createElement("option");
+    opt.value = sede;
+    opt.textContent = sede;
+    selSede.appendChild(opt);
+  });
+
+  anios.forEach((anio) => {
+    if (!selAnio) return;
+    const opt = document.createElement("option");
+    opt.value = anio;
+    opt.textContent = anio;
+    selAnio.appendChild(opt);
+  });
+
   selAsig.addEventListener("change", renderOACards);
   selNivel.addEventListener("change", renderOACards);
+  if (selLiceo) selLiceo.addEventListener("change", renderOACards);
+  if (selSede) selSede.addEventListener("change", renderOACards);
+  if (selAnio) selAnio.addEventListener("change", renderOACards);
   document
     .getElementById("filter-prioritario")
     .addEventListener("change", renderOACards);
 }
 
 // Render tarjetas OA
+
 function renderOACards() {
   const container = document.getElementById("oa-cards-container");
   if (!container) return;
@@ -397,15 +432,22 @@ function renderOACards() {
   const selAsig = document.getElementById("filter-asignatura").value;
   const selNivel = document.getElementById("filter-nivel").value;
   const soloPrioritario = document.getElementById("filter-prioritario").checked;
+  const selLiceo = document.getElementById("filter-liceo")?.value || "";
+  const selSede = document.getElementById("filter-sede")?.value || "";
+  const selAnio = document.getElementById("filter-anio")?.value || "";
 
   const filtered = oaData.filter((oa) => {
     if (selAsig && oa.asignatura !== selAsig) return false;
     if (selNivel && oa.nivel !== selNivel) return false;
+    if (selLiceo && oa.contexto?.liceo !== selLiceo) return false;
+    if (selSede && oa.contexto?.sede !== selSede) return false;
+    if (selAnio && String(oa.contexto?.anio) !== String(selAnio)) return false;
     if (soloPrioritario && oa.prioridad !== "prioritario") return false;
     return true;
   });
 
   // Actualizar KPIs
+// Actualizar KPIs
   const kpiOA = document.getElementById("kpi-oa");
   const kpiAsig = document.getElementById("kpi-asignaturas");
   if (kpiOA) kpiOA.textContent = filtered.length;
@@ -765,6 +807,21 @@ function openOAModal(oa, initialView = "estudiante") {
   if (evalDoc) {
     evalDoc.innerHTML = `<p>${oa.evaluacionDocente || ""}</p>`;
   }
+
+  // Link PEVE (si existe)
+  const peveP = document.getElementById("modal-peve-link");
+  if (peveP) {
+    if (oa.peveUrl) {
+      peveP.innerHTML = `
+        Puedes complementar este OA en tu plataforma PEVE:
+        <a href="${oa.peveUrl}" target="_blank" rel="noopener noreferrer">${oa.peveUrl}</a>.
+      `;
+    } else {
+      peveP.textContent =
+        "Puedes registrar resultados en PEVE usando tu propia estructura de curso.";
+    }
+  }
+
 
   // Link Mineduc
   const mineducP = document.getElementById("modal-mineduc-link");

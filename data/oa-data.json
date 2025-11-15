@@ -232,15 +232,72 @@
     },
     "kpsi": [
       "Puedo identificar la idea principal de un texto informativo.",
-      "Puedo localizar información explícita en un texto."
+      "Puedo localizar información explícita en un texto (qué, quién, dónde).",
+      "Puedo inferir una información que no aparece literal en el texto."
     ],
-    "quiz": [],
+    "quiz": [
+      {
+        "pregunta": "¿Qué es la idea principal de un texto?",
+        "alternativas": [
+          "Un dato cualquiera que aparezca en el texto.",
+          "La opinión del docente.",
+          "La información más importante que el texto quiere comunicar.",
+          "La primera frase del texto, siempre."
+        ],
+        "correcta": 2
+      },
+      {
+        "pregunta": "Si el texto dice: \"La contaminación del río ha aumentado en los últimos años\", ¿qué información explícita podemos sacar?",
+        "alternativas": [
+          "Que la contaminación es igual que antes.",
+          "Que la contaminación del río ha aumentado.",
+          "Que el río está limpio.",
+          "Que el autor no conoce el río."
+        ],
+        "correcta": 1
+      }
+    ],
     "ticketSalida": [
-      "Escribe una frase que resuma el texto leído hoy."
+      "Escribe una frase que resuma el texto leído hoy en no más de 15 palabras.",
+      "Anota una pregunta que te haya surgido después de leer el texto."
     ],
-    "sesiones": [],
-    "rubrica": [],
-    "evaluacionDocente": "Complementa este OA con rúbricas de comprensión lectora y registros PEVE.",
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – Explorando el texto",
+        "objetivo": "Identificar información explícita e implícita en un texto corto.",
+        "actividades": [
+          "Aplicación de KPSI inicial sobre comprensión lectora.",
+          "Lectura guiada de un texto informativo breve relacionado con un tema cercano al curso.",
+          "Subrayar ideas importantes y completar una tabla con ¿qué?, ¿quién?, ¿dónde?, ¿cuándo?."
+        ],
+        "evaluacion": "Lista de cotejo sobre participación y completitud de la tabla de comprensión."
+      },
+      {
+        "titulo": "Sesión 2 – Resumir e inferir",
+        "objetivo": "Elaborar un resumen breve e inferir información no explícita.",
+        "actividades": [
+          "Revisión colectiva de ideas principales y secundarias.",
+          "Redacción de un resumen de una a tres frases.",
+          "Actividad de inferencias: responder preguntas que requieren leer entre líneas."
+        ],
+        "evaluacion": "Rúbrica breve de resumen (claridad, brevedad, fidelidad al texto) más revisión de una inferencia escrita."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Identifica idea principal y detalles relevantes.",
+        "destacado": "Identifica claramente la idea principal y distingue al menos dos detalles relevantes.",
+        "competente": "Identifica la idea principal pero confunde algunos detalles.",
+        "inicial": "Tiene dificultad para distinguir la idea principal de los detalles."
+      },
+      {
+        "criterio": "Elabora resúmenes breves y claros.",
+        "destacado": "Redacta un resumen breve, coherente y fiel al texto original.",
+        "competente": "Redacta un resumen comprensible pero con información redundante o incompleta.",
+        "inicial": "El resumen es confuso o no representa bien el texto leído."
+      }
+    ],
+    "evaluacionDocente": "Registra resultados de KPSI, calidad del resumen e inferencias en la plantilla PEVE. Puedes complementar con comentarios cualitativos para cada estudiante.",
     "mineducUrl": "https://www.curriculumnacional.cl/recursos/lenguaje-1-medio",
     "contexto": {
       "liceo": "Neotech EduLab SpA – Plataforma PEVE",
@@ -251,7 +308,8 @@
       "anio": 2025,
       "jornada": "Vespertina"
     },
-    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv",
+    "peveUrl": "https://cochipichichi.github.io/PEVE/pages/asignaturas.html"
   },
   {
     "id": "MA1M_OA1_NUMEROS",
@@ -271,16 +329,73 @@
       "vr": ""
     },
     "kpsi": [
-      "Puedo ubicar fracciones en la recta numérica.",
-      "Puedo realizar sumas y restas con fracciones con igual denominador."
+      "Puedo ubicar fracciones y números decimales en la recta numérica.",
+      "Puedo sumar y restar fracciones con el mismo denominador.",
+      "Puedo interpretar un problema cotidiano que incluye fracciones o porcentajes."
     ],
-    "quiz": [],
+    "quiz": [
+      {
+        "pregunta": "¿Cuál de las siguientes fracciones es equivalente a 1/2?",
+        "alternativas": [
+          "2/4",
+          "1/3",
+          "3/2",
+          "1/4"
+        ],
+        "correcta": 0
+      },
+      {
+        "pregunta": "Si tengo 3/4 de pizza y como 1/4, ¿cuánto me queda?",
+        "alternativas": [
+          "1/2",
+          "1/4",
+          "2/4",
+          "3/4"
+        ],
+        "correcta": 1
+      }
+    ],
     "ticketSalida": [
-      "Escribe un problema de la vida cotidiana que se resuelva con fracciones."
+      "Escribe un problema de la vida diaria que se resuelva con una suma o resta de fracciones.",
+      "Resuelve el problema que escribiste y explica brevemente tu procedimiento."
     ],
-    "sesiones": [],
-    "rubrica": [],
-    "evaluacionDocente": "Registra desempeño en resolución de problemas con números racionales.",
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – Fracciones en la recta",
+        "objetivo": "Representar fracciones y números decimales en la recta numérica.",
+        "actividades": [
+          "Aplicación de KPSI sobre fracciones y números racionales.",
+          "Trabajo con una recta numérica en papel o digital: ubicar fracciones simples.",
+          "Juego breve de estimación: ¿en qué lugar de la recta va esta fracción?"
+        ],
+        "evaluacion": "Revisión de la recta numérica completada y participación en el juego de estimación."
+      },
+      {
+        "titulo": "Sesión 2 – Problemas con fracciones",
+        "objetivo": "Resolver problemas sencillos de suma y resta con fracciones.",
+        "actividades": [
+          "Resolución guiada de 2–3 problemas modelo.",
+          "Trabajo colaborativo: cada grupo inventa un problema cotidiano con fracciones.",
+          "Intercambio de problemas entre grupos y resolución."
+        ],
+        "evaluacion": "Rúbrica breve sobre formulación y resolución de problemas (claridad, procedimiento, respuesta)."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Usa fracciones para representar cantidades.",
+        "destacado": "Representa fracciones correctamente en la recta y en situaciones cotidianas.",
+        "competente": "Representa fracciones sencillas con algunos errores menores.",
+        "inicial": "Presenta dificultad para representar fracciones en la recta o en problemas."
+      },
+      {
+        "criterio": "Resuelve problemas con operaciones de números racionales.",
+        "destacado": "Resuelve con éxito problemas de suma y resta de fracciones explicando su procedimiento.",
+        "competente": "Resuelve la mayoría de los problemas pero con explicaciones parciales.",
+        "inicial": "Tiene dificultad para resolver los problemas o justificar sus respuestas."
+      }
+    ],
+    "evaluacionDocente": "Registra en la plantilla PEVE el desempeño en KPSI, ejercicios formales y problemas creados por los estudiantes.",
     "mineducUrl": "https://www.curriculumnacional.cl/recursos/matematica-1-medio",
     "contexto": {
       "liceo": "Neotech EduLab SpA – Plataforma PEVE",
@@ -291,7 +406,8 @@
       "anio": 2025,
       "jornada": "Vespertina"
     },
-    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv",
+    "peveUrl": "https://cochipichichi.github.io/PEVE/pages/asignaturas.html"
   },
   {
     "id": "HI1M_OA2_BURGUESIA",
@@ -311,15 +427,73 @@
       "vr": ""
     },
     "kpsi": [
-      "Puedo nombrar al menos dos características de la cultura burguesa del siglo XIX."
+      "Puedo ubicar el siglo XIX en una línea de tiempo básica.",
+      "Puedo nombrar al menos dos características de la cultura burguesa del siglo XIX.",
+      "Puedo identificar diferencias entre la vida de la burguesía y de los sectores populares."
     ],
-    "quiz": [],
+    "quiz": [
+      {
+        "pregunta": "¿Qué grupo social se fortaleció especialmente con la expansión del capitalismo en el siglo XIX?",
+        "alternativas": [
+          "La nobleza tradicional",
+          "El campesinado",
+          "La burguesía",
+          "Los esclavos"
+        ],
+        "correcta": 2
+      },
+      {
+        "pregunta": "¿Cuál de estas es una característica típica de la cultura burguesa del siglo XIX?",
+        "alternativas": [
+          "Desprecio por la educación y el trabajo",
+          "Valoración del esfuerzo, la educación y la propiedad privada",
+          "Rechazo total de la vida urbana",
+          "Defensa del absolutismo monárquico"
+        ],
+        "correcta": 1
+      }
+    ],
     "ticketSalida": [
-      "Explica una diferencia entre la vida burguesa y la de los sectores populares en el siglo XIX."
+      "Describe una escena cotidiana de una familia burguesa del siglo XIX (2–3 frases).",
+      "Escribe una diferencia entre la vida burguesa y la de los sectores populares."
     ],
-    "sesiones": [],
-    "rubrica": [],
-    "evaluacionDocente": "Puedes cruzar este OA con recursos digitales del Currículum Nacional y registrar evidencias en el template PEVE.",
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – ¿Quiénes eran la burguesía?",
+        "objetivo": "Caracterizar a la burguesía como grupo social en el siglo XIX.",
+        "actividades": [
+          "Aplicación de KPSI sobre grupos sociales y siglo XIX.",
+          "Análisis de imágenes y fuentes breves (pinturas, fotografías, textos).",
+          "Lluvia de ideas: ¿qué valores y formas de vida aparecen en estas fuentes?"
+        ],
+        "evaluacion": "Registro en lista de cotejo sobre participación y uso de evidencias de las fuentes."
+      },
+      {
+        "titulo": "Sesión 2 – Contrastes de vida",
+        "objetivo": "Comparar condiciones de vida de la burguesía y sectores populares.",
+        "actividades": [
+          "Lectura guiada de un texto breve que contraste ambos grupos.",
+          "Completar una tabla comparativa (vivienda, trabajo, ocio, educación).",
+          "Escritura de un breve párrafo comparativo."
+        ],
+        "evaluacion": "Rúbrica breve de comparación escrita (uso de ejemplos, claridad, uso de vocabulario histórico)."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Caracteriza la cultura burguesa y sus valores.",
+        "destacado": "Describe con claridad valores, prácticas y contexto de la burguesía, usando ejemplos de fuentes.",
+        "competente": "Menciona algunas características de la burguesía, con ejemplos parciales.",
+        "inicial": "Tiene dificultad para describir rasgos de la burguesía o confunde grupos sociales."
+      },
+      {
+        "criterio": "Compara condiciones de vida entre grupos sociales.",
+        "destacado": "Establece comparaciones claras entre burguesía y sectores populares, usando conectores adecuados.",
+        "competente": "Realiza comparaciones simples con algunos ejemplos.",
+        "inicial": "Presenta comparaciones poco claras o sin ejemplos concretos."
+      }
+    ],
+    "evaluacionDocente": "Registra en la plantilla PEVE los resultados de KPSI, tabla comparativa y párrafo escrito. Puedes integrar este OA con análisis de fuentes digitales del Currículum Nacional.",
     "mineducUrl": "https://www.curriculumnacional.cl/curriculum/7o-basico-2o-medio/historia-geografia-ciencias-sociales/1-medio/hi1m-oa-02",
     "contexto": {
       "liceo": "Neotech EduLab SpA – Plataforma PEVE",
@@ -330,6 +504,304 @@
       "anio": 2025,
       "jornada": "Vespertina"
     },
-    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv"
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv",
+    "peveUrl": "https://cochipichichi.github.io/PEVE/pages/asignaturas.html"
+  },
+  {
+    "id": "CN1M_OA1_MATERIA_ENERGIA",
+    "codigo": "CN1M OA1",
+    "asignatura": "Ciencias Naturales",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Explicar la organización de la materia y la transformación de la energía en sistemas naturales y tecnológicos.",
+    "area": "Física / Química",
+    "tags": [
+      "PEVE",
+      "Invernadero",
+      "Datos"
+    ],
+    "xr": {
+      "viewer3d": "",
+      "ar": "",
+      "vr": ""
+    },
+    "kpsi": [
+      "Puedo diferenciar entre materia y energía con un ejemplo cotidiano.",
+      "Puedo nombrar al menos dos formas de energía (por ejemplo, térmica, luminosa, eléctrica).",
+      "Puedo describir una transformación de energía en el invernadero o laboratorio."
+    ],
+    "quiz": [
+      {
+        "pregunta": "¿Cuál de las siguientes es una forma de energía?",
+        "alternativas": [
+          "Madera",
+          "Agua",
+          "Energía térmica",
+          "Aire"
+        ],
+        "correcta": 2
+      },
+      {
+        "pregunta": "En un foco que se enciende, ¿qué transformación de energía ocurre principalmente?",
+        "alternativas": [
+          "Energía luminosa a eléctrica",
+          "Energía eléctrica a luminosa y térmica",
+          "Energía sonora a eléctrica",
+          "Energía química a térmica solamente"
+        ],
+        "correcta": 1
+      }
+    ],
+    "ticketSalida": [
+      "Describe una situación de tu entorno donde se transforme la energía (por ejemplo, en el invernadero o sala de clases).",
+      "Identifica en tu ejemplo una forma de energía de entrada y una de salida."
+    ],
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – ¿Qué es materia? ¿Qué es energía?",
+        "objetivo": "Distinguir entre materia y energía a través de ejemplos cotidianos.",
+        "actividades": [
+          "KPSI inicial sobre conceptos de materia y energía.",
+          "Clasificación de ejemplos en dos columnas: materia / energía.",
+          "Discusión guiada con contraejemplos para afinar la idea de energía."
+        ],
+        "evaluacion": "Observación y revisión de la clasificación de ejemplos."
+      },
+      {
+        "titulo": "Sesión 2 – Transformaciones de energía",
+        "objetivo": "Identificar transformaciones de energía en sistemas simples.",
+        "actividades": [
+          "Análisis de dispositivos cotidianos (foco, hervidor, panel solar).",
+          "Trabajo en grupos: elegir un ejemplo del invernadero o laboratorio y describir su transformación de energía.",
+          "Puesta en común con mini afiches o diapositivas."
+        ],
+        "evaluacion": "Rúbrica breve de presentación (claridad del ejemplo, identificación de formas de energía, uso del vocabulario)."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Distingue materia y energía en ejemplos cotidianos.",
+        "destacado": "Distingue con seguridad entre ejemplos de materia y de energía, justificando sus respuestas.",
+        "competente": "Distingue la mayoría de los ejemplos, con algunas dudas puntuales.",
+        "inicial": "Confunde con frecuencia materia y energía en los ejemplos."
+      },
+      {
+        "criterio": "Identifica transformaciones de energía en sistemas simples.",
+        "destacado": "Describe con claridad transformaciones de energía, indicando forma inicial y final.",
+        "competente": "Identifica al menos una forma de energía antes y después, con explicaciones breves.",
+        "inicial": "Presenta dificultad para identificar transformaciones de energía."
+      }
+    ],
+    "evaluacionDocente": "Usa la plantilla PEVE para registrar KPSI, resultados de las actividades y presentaciones grupales. Puedes vincular este OA con proyectos de invernadero y mediciones con sensores.",
+    "mineducUrl": "https://www.curriculumnacional.cl/",
+    "contexto": {
+      "liceo": "Liceo Bicentenario de Excelencia Polivalente San Nicolás",
+      "sede": "San Nicolás",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio CN",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv",
+    "peveUrl": "https://cochipichichi.github.io/PEVE/pages/asignaturas.html"
+  },
+  {
+    "id": "CN1M_OA3_SISTEMAS_ECOLOGICOS",
+    "codigo": "CN1M OA3",
+    "asignatura": "Ciencias Naturales",
+    "nivel": "1° medio",
+    "prioridad": "prioritario",
+    "titulo": "Analizar el flujo de energía y el ciclo de la materia en ecosistemas, usando modelos y datos.",
+    "area": "Ecología",
+    "tags": [
+      "Invernadero",
+      "Datos",
+      "XR"
+    ],
+    "xr": {
+      "viewer3d": "viewer3D/fotosintesis.html",
+      "ar": "viewerAR/fotosintesis.html",
+      "vr": "viewerVR/fotosintesis.html"
+    },
+    "kpsi": [
+      "Puedo identificar productores, consumidores y descomponedores en un ecosistema.",
+      "Puedo explicar qué es una cadena trófica.",
+      "Puedo indicar que la energía fluye y la materia circula en un ecosistema."
+    ],
+    "quiz": [
+      {
+        "pregunta": "En una cadena trófica, ¿dónde se encuentra el origen de la energía?",
+        "alternativas": [
+          "En los descomponedores",
+          "En los consumidores secundarios",
+          "En el Sol y los productores",
+          "En los depredadores tope"
+        ],
+        "correcta": 2
+      },
+      {
+        "pregunta": "¿Cuál de los siguientes organismos podría ser un descomponedor?",
+        "alternativas": [
+          "Un zorro",
+          "Un hongo",
+          "Un halcón",
+          "Un ciervo"
+        ],
+        "correcta": 1
+      }
+    ],
+    "ticketSalida": [
+      "Dibuja una cadena trófica simple del invernadero o entorno escolar e indica flechas de energía.",
+      "Escribe una acción de cuidado que ayude a mantener el equilibrio de ese ecosistema."
+    ],
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – Mapa del ecosistema",
+        "objetivo": "Reconocer componentes bióticos y abióticos de un ecosistema cercano.",
+        "actividades": [
+          "KPSI sobre conceptos de ecosistema y cadena trófica.",
+          "Exploración del invernadero o patio escolar para identificar organismos y factores abióticos.",
+          "Construcción de un mapa simple del ecosistema en papel o digital."
+        ],
+        "evaluacion": "Revisión de mapas de ecosistema y participación en discusión."
+      },
+      {
+        "titulo": "Sesión 2 – Cadenas tróficas y flujo de energía",
+        "objetivo": "Construir cadenas tróficas y analizar el flujo de energía.",
+        "actividades": [
+          "Trabajo en grupos: crear cadenas tróficas del sistema observado.",
+          "Uso de modelos 3D o fichas para representar niveles tróficos.",
+          "Reflexión final: ¿qué pasaría si desaparece un eslabón?"
+        ],
+        "evaluacion": "Rúbrica breve para la cadena trófica (identificación correcta de niveles, flechas, explicación)."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Identifica componentes de un ecosistema y sus roles tróficos.",
+        "destacado": "Identifica correctamente productores, consumidores y descomponedores y explica sus roles.",
+        "competente": "Identifica la mayoría de los roles con algunas confusiones menores.",
+        "inicial": "Presenta dificultad para asignar roles tróficos a los organismos."
+      },
+      {
+        "criterio": "Analiza el flujo de energía en cadenas tróficas.",
+        "destacado": "Explica con claridad el sentido de las flechas de energía y consecuencias de cambios en el ecosistema.",
+        "competente": "Describe el flujo de energía de forma básica.",
+        "inicial": "Tiene dificultad para explicar el flujo de energía en la cadena trófica."
+      }
+    ],
+    "evaluacionDocente": "Registra en la plantilla PEVE los resultados de KPSI, mapas de ecosistema y cadenas tróficas creadas por el curso.",
+    "mineducUrl": "https://www.curriculumnacional.cl/",
+    "contexto": {
+      "liceo": "Liceo Bicentenario de Excelencia Polivalente San Nicolás",
+      "sede": "San Nicolás",
+      "comuna": "San Nicolás",
+      "region": "Ñuble",
+      "curso": "1° Medio CN",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv",
+    "peveUrl": "https://cochipichichi.github.io/PEVE/pages/asignaturas.html"
+  },
+  {
+    "id": "CN8M_OA4_SUELO",
+    "codigo": "CN8 OA4",
+    "asignatura": "Ciencias Naturales",
+    "nivel": "8° básico",
+    "prioridad": "prioritario",
+    "titulo": "Investigar propiedades del suelo y su importancia para los ecosistemas y la agricultura.",
+    "area": "Suelo / Ecología",
+    "tags": [
+      "Suelo",
+      "Invernadero",
+      "PEVE"
+    ],
+    "xr": {
+      "viewer3d": "",
+      "ar": "",
+      "vr": ""
+    },
+    "kpsi": [
+      "Puedo describir al menos dos propiedades del suelo (color, textura, humedad).",
+      "Puedo explicar por qué el suelo es importante para las plantas.",
+      "Puedo relacionar cuidado del suelo con cuidado del ecosistema."
+    ],
+    "quiz": [
+      {
+        "pregunta": "¿Cuál de las siguientes es una propiedad observable del suelo?",
+        "alternativas": [
+          "Edad del suelo",
+          "Color y textura",
+          "Altura del suelo",
+          "Peso exacto del suelo"
+        ],
+        "correcta": 1
+      },
+      {
+        "pregunta": "¿Por qué el suelo es importante para las plantas?",
+        "alternativas": [
+          "Porque les entrega soporte, agua y nutrientes.",
+          "Porque evita que hagan fotosíntesis.",
+          "Porque las enfría en exceso.",
+          "Porque reemplaza al aire."
+        ],
+        "correcta": 0
+      }
+    ],
+    "ticketSalida": [
+      "Escribe una recomendación para cuidar el suelo del invernadero o patio de la escuela.",
+      "Menciona un cambio que notaríamos si el suelo se degradara mucho."
+    ],
+    "sesiones": [
+      {
+        "titulo": "Sesión 1 – Explorando el suelo",
+        "objetivo": "Observar propiedades del suelo mediante una pequeña investigación.",
+        "actividades": [
+          "KPSI inicial sobre suelo y su importancia.",
+          "Recolección de muestras de suelo de distintos sectores (maceteros, jardín, invernadero).",
+          "Observación y registro de color, textura y humedad en una tabla."
+        ],
+        "evaluacion": "Revisión de la tabla de observaciones y participación en la discusión."
+      },
+      {
+        "titulo": "Sesión 2 – Suelo y cuidado del entorno",
+        "objetivo": "Relacionar la calidad del suelo con el cuidado de los ecosistemas.",
+        "actividades": [
+          "Análisis de casos: suelos erosionados, compactados o contaminados (imágenes / videos).",
+          "Lluvia de ideas sobre acciones para cuidar el suelo escolar.",
+          "Elaboración de un pequeño compromiso de curso para el cuidado del suelo."
+        ],
+        "evaluacion": "Rúbrica breve sobre la propuesta de cuidado (claridad, pertinencia, compromiso)."
+      }
+    ],
+    "rubrica": [
+      {
+        "criterio": "Describe propiedades del suelo a partir de la observación.",
+        "destacado": "Describe con precisión varias propiedades del suelo usando vocabulario adecuado.",
+        "competente": "Describe al menos dos propiedades básicas del suelo.",
+        "inicial": "Menciona propiedades de forma muy general o confusa."
+      },
+      {
+        "criterio": "Propone acciones para el cuidado del suelo.",
+        "destacado": "Propone acciones concretas y realistas para cuidar el suelo del entorno escolar.",
+        "competente": "Propone al menos una acción general de cuidado del suelo.",
+        "inicial": "Tiene dificultad para proponer acciones específicas."
+      }
+    ],
+    "evaluacionDocente": "Registra en la plantilla PEVE los resultados de las observaciones y las propuestas de cuidado del suelo.",
+    "mineducUrl": "https://www.curriculumnacional.cl/",
+    "contexto": {
+      "liceo": "Escuela Aliada Neotech EduLab – Modo demo",
+      "sede": "Otra sede",
+      "comuna": "Chillán",
+      "region": "Ñuble",
+      "curso": "8° Básico CN",
+      "anio": 2025,
+      "jornada": "Diurna"
+    },
+    "csvTemplateUrl": "docs/plantilla_peve_kpsi_quiz_ticket.csv",
+    "peveUrl": "https://cochipichichi.github.io/PEVE/pages/asignaturas.html"
   }
 ]
